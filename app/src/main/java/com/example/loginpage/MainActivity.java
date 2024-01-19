@@ -1,5 +1,6 @@
 package com.example.loginpage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.loginpage.databinding.ActivityMainBinding;
@@ -31,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.tvSignup.setOnClickListener(view -> {
-            // Implement your action for tvSignup click here
+            // Start RegisterActivity when "Sign Up" is clicked
+            startActivity(new Intent(MainActivity.this, RegisterActivity.class));
         });
     }
 }
